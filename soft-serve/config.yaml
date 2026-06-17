@@ -1,5 +1,5 @@
 name: Soft Serve Git
-version: "1.0.0"
+version: "1.0.1"
 slug: soft-serve
 description: Self-hosted Git server (charmbracelet/soft-serve) for private remotes on owned hardware — SSH-native, no web stack
 init: false
