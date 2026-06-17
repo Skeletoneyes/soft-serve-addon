@@ -1,0 +1,18 @@
+name: Soft Serve Git
+version: "1.0.0"
+slug: soft-serve
+description: Self-hosted Git server (charmbracelet/soft-serve) for private remotes on owned hardware — SSH-native, no web stack
+init: false
+arch:
+  - aarch64
+startup: application
+boot: auto
+ports:
+  23231/tcp: 23231
+ports_description:
+  23231/tcp: Soft Serve SSH — git transport + admin TUI
+options:
+  admin_keys: []
+schema:
+  admin_keys:
+    - str

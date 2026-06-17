@@ -1,0 +1,2 @@
+# run.sh MUST stay LF — a CRLF entrypoint cannot be exec'd in the Alpine container.
+*.sh text eol=lf
