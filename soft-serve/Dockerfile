@@ -3,8 +3,9 @@ FROM charmcli/soft-serve:latest
 # Become root so we can install the options parser and stage the entrypoint.
 USER root
 
-# jq parses the HA add-on options (/data/options.json) at runtime.
-RUN apk add --no-cache jq
+# jq parses the HA add-on options (/data/options.json) at runtime;
+# sqlite is used by run.sh diagnostics to introspect the seeded admin.
+RUN apk add --no-cache jq sqlite
 
 # The image defaults SOFT_SERVE_DATA_PATH to /soft-serve; re-home it onto the
 # add-on's persistent /data volume so repos + server state survive rebuilds.
